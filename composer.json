@@ -1,0 +1,35 @@
+{
+    "name": "mazejs/laravel",
+    "description": "Laravel integration for mazejs",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mario Brino",
+            "email": "mariobrino@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Maze\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Maze\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Maze\\ServiceProvider"
+            ],
+            "aliases": {
+                "Maze": "Maze\\Facade"
+            }
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "orchestra/testbench": "^5.3"
+    }
+}
