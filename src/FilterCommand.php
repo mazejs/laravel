@@ -20,7 +20,7 @@ class FilterCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Create a new model query filter';
+    protected $description = 'Create a new query filter';
 
     /**
      * Create a new command instance.
