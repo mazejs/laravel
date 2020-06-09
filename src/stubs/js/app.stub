@@ -1,0 +1,8 @@
+window.Vue = require('vue');
+window.Bus = new Vue();
+
+require('./bootstrap');
+
+const app = new Vue({
+    el: '#app',
+});
