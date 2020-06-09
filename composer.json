@@ -22,10 +22,7 @@
         "laravel": {
             "providers": [
                 "Maze\\ServiceProvider"
-            ],
-            "aliases": {
-                "Maze": "Maze\\Facade"
-            }
+            ]
         }
     },
     "require": {},
