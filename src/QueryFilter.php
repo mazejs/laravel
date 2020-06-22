@@ -48,6 +48,7 @@ class QueryFilter
     public function apply(Builder $builder)
     {
         $this->builder = $builder;
+
         foreach ($this->filters() as $name => $value) {
             if (! method_exists($this, $name)) {
                 continue;
@@ -58,6 +59,7 @@ class QueryFilter
                 $this->$name();
             }
         }
+
         return $this->builder;
     }
 
@@ -77,8 +79,9 @@ class QueryFilter
      */
     protected function order($value)
     {
-        if (! $value && ! strpos($value, '.'))
+        if (! $value && ! strpos($value, '.')) {
             return $this->builder;
+        }
 
         if (strpos($value, ':')) {
             $result = explode(':', $value);
@@ -86,6 +89,7 @@ class QueryFilter
         }
 
         $result = explode('.', $value);
+
         return $this->builder->orderBy($result[0], $result[1]);
     }
 
@@ -96,7 +100,9 @@ class QueryFilter
      */
     protected function like($name, $value)
     {
-        if (! $value) return $this->builder;
+        if (! $value) {
+            return $this->builder;
+        }
 
         return $this->builder->where($name, 'like', "%{$value}%");
     }
