@@ -1,6 +1,6 @@
-import mazejs from "mazejs";
-import moment from "moment";
 import vue from "vue";
+import mazejs from "@mazejs/mazejs";
+import moment from "moment";
 
 window.Vue = vue;
 
