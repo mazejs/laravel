@@ -204,6 +204,7 @@ class PresetCommand extends Command
         ];
 
         $packages['dependencies'] = [
+            'mazejs' => '^0.1.0',
             'moment' => '^2.26.0',
             'tailwindcss' => '^1.4.6',
             'vue' => '^2.6.11'

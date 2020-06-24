@@ -1,8 +1,15 @@
-window.Vue = require('vue');
-window.Bus = new Vue();
+import mazejs from "mazejs";
+import moment from "moment";
+import vue from "vue";
 
-require('./bootstrap');
+window.Vue = vue;
+
+Vue.prototype.bus = new Vue();
+Vue.prototype.moment = moment;
+Vue.use(mazejs);
+
+require("./bootstrap");
 
 const app = new Vue({
-    el: '#app',
+    el: "#app",
 });
