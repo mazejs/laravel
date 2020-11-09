@@ -23,3 +23,6 @@ npm run dev
 ```bash
 php artisan make:filter <name>
 ```
+
+## Example
+[Laravel](https://github.com/mazejs/example)
